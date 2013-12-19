@@ -1,0 +1,2677 @@
+/* 
+10/13/2011		VAV		Created styel to assoc usopn2011 event with placeholder background 
+10/18/2011		VAV		Created default style for backgrounds
+10/24/2011		VAV		changed ../ to /resource/refresh on belo style
+10/25/2011		VAV		adding style for homepage background
+10/25/2011		VAV		Moving inline css for video from home page to here 
+10/28/2011		VAV		Created style to control img position for left side top foreground image
+11/03/2011		VAV		Changing min-width from 125px to 120px
+11/08/2011		VAV		Re-did style controlling images on event and athlete pages
+11/14/2011		VAV		There are left and right panels overlaying the big background image at the top of the home page.
+                        The controlling css for this is in the LIFESYLE section.
+                        See '#ul-homecycle li div.center996px div.left_498'
+                        and '#ul-homecycle li div.center996px div.right_498' 
+	
+11-18-2011		VAV		Crea spec style to control height of upper area of home page, and thus height of sect belows
+11-18-2011      VAV             Removed z-index from style
+11/22/2011		VAV		Added style for giez on collection template
+12/02/2011		VAV		Added two styles to add flexibily to technology section.  I may not use these
+12/07/2011		VAV		Created section and style for videos
+12/07/2011		VAV		Added new styles for 'videos' that are duplicates for every style for 'news'
+12/08/2011		VAV		Added z-index:2000
+12/07/2011		VAV		Added new styles for 'press' that are duplicates for every style for 'news'
+12/12/2011		VAV		New style for putting generic titles on pages using h2 
+12/13/2011		VAV		Removed z-index.  Why?
+
+12/15/2011		VAV		Old bigYouTube code
+12/15/2011		VAV		New bigYouTube code
+
+12/15/2011		VAV		Old Splash badge style
+12/15/2011		VAV		New Splash badge style
+12/16/2011		VAV		Added style to control width of description text on watches-deatail.tpl
+12/16/2011		VAV		Changed 'list-style:disc inside' to 'list-style:disc inside'
+
+1/4/12			sga* 	Added
+1/4/12			sga		eo Added 
+1/4/12			sga		Removed "clear:both;" from the last line here
+
+01/05/2012		VAV		See file g-shock_life.css for individual contents of <li>s 
+01/05/2012		VAV		See file g-shock_life.css for individual athletes
+01/05/2012		VAV		See file g-shock_life.css for individual lifers
+
+01/06/2012		VAV		Increased z-index from 100 to 999
+
+
+*studio grafica agency
+
+*/
+
+
+/* HTML5 ? Boilerplate */
+
+@font-face {
+    font-family: 'Swiss721 Bold';
+    src: url('swiss721boldbt-webfont.eot');
+    src: url('swiss721boldbt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swiss721boldbt-webfont.woff') format('woff'),
+         url('swiss721boldbt-webfont.ttf') format('truetype'),
+         url('swiss721boldbt-webfont.svg#Swiss721BTBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Swiss921 Alt';
+    src: url('swissbtrega-webfont.eot');
+    src: url('swissbtrega-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swissbtrega-webfont.woff') format('woff'),
+         url('swissbtrega-webfont.ttf') format('truetype'),
+         url('swissbtrega-webfont.svg#Swiss921RegularA') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ArialNarrowBold';
+    src: url('ArialNarrowBold.eot');
+    src: url('ArialNarrowBold.eot?#iefix') format('embedded-opentype'),
+         url('ArialNarrowBold.woff') format('woff'),
+         url('ArialNarrowBold.ttf') format('truetype'),
+         url('ArialNarrowBold.svg#') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ""; content: none; }
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+table { border-collapse: collapse; border-spacing: 0; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+input, select { vertical-align: middle; }
+
+body { font:13px/1.231 sans-serif; *font-size:small; }
+select, input, textarea, button { font:99% sans-serif; }
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+html { overflow-y: scroll; }
+a:hover, a:active { outline: none; }
+ul, ol { margin:0; list-style: none;list-style-type: none; }
+nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
+small { font-size: 85%; }
+strong, th { font-weight: bold; }
+td { vertical-align: top; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 15px; }
+textarea { overflow: auto; } 
+.ie6 legend, .ie7 legend { margin-left: -7px; } 
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+button, input, select, textarea { margin: 0; }
+input:valid, textarea:valid   {  }
+input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+
+::-moz-selection{ background: #f6180f; color:#fff; text-shadow: none; }
+::selection { background:#f6180f; color:#fff; text-shadow: none; }
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+button {  width: auto; overflow: visible; }
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+body, select, input, textarea { color: #444; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+a, a:active, a:visited { color: #F6180F;text-decoration:none }
+a:hover { color: #036; }
+div,ul,ol{position:relative;}
+.floatRight{ float:right; }
+.floatLeft{	float:left; }
+.center996px{
+	position:relative;
+	width:996px;
+	margin:0 auto;
+/*	z-index:2000;  */   /* 12/08/2011		VAV		Added z-index:2000   */  /* 12/13/2011		VAV		Removed z-index.  Why? */
+	             
+}
+
+a.hotspot{
+	position:absolute;
+	display:block;
+	width:34px;
+	height:33px;
+	background:url(/resource/refresh/images/img_hotspot.png) no-repeat;
+	overflow:hidden;
+	text-indent: -999em;
+}
+.grey{color:#666}
+.red{color:#f6180f;}
+/*
+ * GENERIC BUTTONS
+ */
+a.btn-grey{
+	position:relative;
+	display:inline-block;
+	padding:0 15px;
+	background:#7a7a7a;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	behavior: url(/resource/refresh/stylesheet/PIE.htc);
+	
+	color:#fff;
+	font:normal 10px/30px "Swiss721 Bold", Helvetica, Arial;
+	
+	text-shadow: 0 1px 1px #333;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #333;
+}
+a.btn-grey:hover{
+	background:#666;
+}
+a.btn-grey:active{
+	top:1px;
+	border-bottom:1px solid #fff;
+}
+a.btn-red{
+	position:relative;
+	display:inline-block;
+	padding:0 15px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	font:normal 10px/30px "Swiss721 Bold", Helvetica, Arial;
+	
+	text-shadow: 0 1px 1px #fff;
+	border-bottom:1px solid #d6120b;
+	border-top:1px solid #ff635d;
+	background:#f6180f;
+	color:#fff;
+	text-shadow: 0px 1px 1px #990000;
+	behavior: url(/PIE.htc);
+	
+}
+a.buy-now-btn {
+	position:relative;
+	display:inline-block;
+	padding:0 15px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	behavior: url(/PIE.htc);
+	font:normal 14px/47px "Swiss721 Bold", Helvetica, Arial;
+	text-shadow: 0 1px 1px #fff;
+	border-bottom:1px solid #d6120b;
+	border-top:1px solid #ff635d;
+	background:#f6180f;
+	color:#fff;
+	text-shadow: 0px 1px 1px #990000;
+	height: 40px;
+	margin-top:-10px;
+}
+
+a.buy-now-btn:hover{
+	background:#cc0000;
+}
+a.buy-now-btn:active{
+	top:1px;
+	border-bottom:1px solid #fff;
+}
+a.buy-now-btn.xl{
+	font:normal 17px/40px "Swiss921 Alt", Helvetica, Arial;
+	
+}
+a.buy-now-btn.xl:active{
+		border-bottom:1px solid #ccc;
+}
+
+.base-line-shift {
+	top: -2px;
+	position: relative;
+}
+html.oldie a.btn-red{
+	background:url(/resource/refresh/images/btn-gradient-fff.png) repeat-x;
+}
+a.btn-red:hover{
+	background:#cc0000;
+}
+a.btn-red:active{
+	top:1px;
+	border-bottom:1px solid #fff;
+}
+a.btn-red.xl{
+	font:normal 17px/40px "Swiss921 Alt", Helvetica, Arial;
+	
+	position:relative;
+	display:inline-block;
+	padding:0 15px;
+		
+	text-shadow: 0 1px 1px #fff;
+	border-bottom:1px solid #d6120b;
+	border-top:1px solid #ff635d;
+	background:#f6180f;
+	color:#fff;
+	text-shadow: 0px 1px 1px #990000;
+	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	behavior: url(/PIE.htc);
+}
+a.btn-red.xl:active{
+		border-bottom:1px solid #ccc;
+}
+.btn-play{
+	position:absolute;
+	width:16px;
+	height:16px;
+	bottom:2px;
+	right:2px;
+	
+	background:url(/resource/refresh/images/img_play.png)
+}
+
+a.btn-flatdark{
+	position:relative;
+	text-indent:0;
+	font:normal 9px/14px "Swiss721 Bold", Helvetica;
+	letter-spacing:normal;
+	color:#cbb3b2; 
+	
+	padding:3px 7px 3px 7px;
+	background:#621817;
+	border:1px solid #621817;
+	height:14px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	behavior: url(/resource/refresh/stylesheet/PIE.htc);
+}
+.watches-series-container > h2 > a.btn-flatdark{
+	margin-left:15px;
+	top:-2px;
+}
+html.ie7 .watches-series-container > h2 > a.btn-flatdark{
+	top:0;
+}
+html.ie8 .watches-series-container > h2 > a.btn-flatdark{
+	top:-1px;
+}
+a.btn-flatdark:hover{
+	color:#fff;
+	cursor: pointer;
+	background:#f6180f;
+	border:1px solid #621817;
+}
+
+
+/*
+ * GENERIC COLUMNS
+ */
+ul.bucket-3col{
+	width:996px;
+	height:328px;
+	margin:0 auto 20px;
+	left:-2px;
+	overflow: auto;
+	clear: both;
+}
+ul.bucket-3col li{
+	width:328px;
+	margin-left:4px;
+	position: relative;
+	float:left;
+}
+
+ul.reg-2col{
+	margin:0 auto;
+	overflow: auto;
+}
+ul.reg-2col > li{
+	width:498px;
+	position: relative;
+	float:left;
+}
+
+
+/**
+ * GSHOCK
+ * SGC AGENCY
+ * -
+ * j0e.me
+ * -
+ */
+
+
+/*
+ * HEADER
+ */
+
+html,body {
+	height:100%;
+	overflow: hidden;
+	background:#252326;
+}
+#container{
+	width:100%;
+	height:100%;
+	overflow:auto;
+}
+header{
+	position:absolute;
+	top:0;
+	left:50%;
+	width:996px;
+	margin-left:-498px;
+	z-index: 999;
+}
+nav{
+	position:relative;
+	margin:0 auto;
+	width:996px;
+}
+	nav a, nav a:visited{
+		color:#fff;
+		text-transform: uppercase;
+	}
+	nav a:hover{
+		color:#ccc;
+	}
+ul#nav-primary{
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	clear:both;
+	height:44px;
+	background:url(/resource/refresh/images/ul_nav-primary-bgNoRepeat.png) center center no-repeat;
+}
+ul#nav-primary > li{
+	position: relative;
+	float:left;
+	height:44px;
+	margin-left:20px;
+	padding-right:30px;
+	background:url(/resource/refresh/images/ul_nav-primary-divider.png) center right no-repeat;
+}
+ul#nav-primary > li.nodivider{
+	background:none;
+	padding:0 0 0 10px;
+}
+ul#nav-primary > li.nodivider.first{
+	padding-left:20px;
+}
+ul#nav-primary > li:first-child{
+	margin:0;
+	width:110px;
+	background:none;
+}
+ul#nav-primary > li > a, ul.dd > li > a{
+	font:normal 15px/44px "Swiss921 Alt", "Helvetica Neue", Helvetica;
+	letter-spacing:0.025em;
+	text-shadow: 0px 1px 2px #000;
+}
+ul#nav-primary > li > a:hover{
+	color:#fff;
+}
+ul#nav-primary > li > a:active, ul#nav-primary > li > a.active,
+ul#nav-secondary > li > a:active, ul#nav-secondary > li > a.active,
+ul.dd > li > a:active, ul.dd > li > a.active
+{
+	color:#f6180f;
+	cursor:default;
+}
+ul#nav-secondary{
+	float:right;
+}
+ul#nav-secondary > li{
+	position: relative;
+	float:left;
+	height:35px;
+	margin-left:30px;
+}
+ul#nav-secondary > li:first-child{
+	margin:0;
+}
+ul#nav-secondary > li > a{
+	font:normal 9px/35px "Swiss721 Bold", "Helvetica Neue", Helvetica;
+    text-shadow: 0px 1px 2px #000;
+	filter: dropshadow(color=#000, offx=0, offy=1);
+}
+ul#nav-dropdown-products,ul#nav-dropdown-gshocklife,ul#nav-dropdown-technology{
+	position:absolute;
+	display: none;
+	bottom:-22px;
+}
+ul#nav-dropdown-products{
+	left:130px;
+}
+ul#nav-dropdown-gshocklife{
+	left:240px;
+}
+ul#nav-dropdown-technology{
+	left:491px;
+}
+ul.dd > li{
+	position:relative;
+	float:left;
+	margin-left:30px;
+}
+ul.dd > li > a{
+	line-height: 15px;
+	font-size:13px;
+	letter-spacing: .015em
+}
+	h1 a{
+		display:block;
+		position: absolute;
+		top:-15px;
+		left:10px;
+	}
+	a#btn-nav-babyg{
+		width:32px;height:32px;
+		background:url(/resource/refresh/images/logo_BabyG-32x32-sprite.png) top center no-repeat;
+		top:5px;
+	}
+	a#btn-nav-babyg:hover{
+		background-position: bottom center;
+	}
+	a#btn-nav-worldofgshock{
+		width:87px;height:7px;
+		background:url(/resource/refresh/images/logo_WorldOfGshock-sprite.png) top center no-repeat;
+		top:18px;
+	}
+	a#btn-nav-worldofgshock:hover{
+		background-position: bottom center;
+	}
+	a.rollover{
+		position:relative;
+		display:block;
+		text-indent:-999em;
+	}
+	a.rollover:hover{
+	}	
+
+
+#main{
+	position: relative;
+	margin:0 auto;
+}
+
+/*
+ * SEARCH
+ */
+
+#searchForm fieldset {
+    width:120px;
+    position:relative;
+    display:block;
+    margin-top:3px;
+    margin-left:30px;
+}
+#re-searchForm fieldset {
+    width:250px;
+    position:relative;
+    display:block;
+    margin-top:3px;
+    margin-left:30px;
+}
+
+div.input {
+	position:absolute;
+    width:120px;
+    padding:3px 15px 7px 15px;
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+    border:1px solid #525252;
+
+    box-shadow:inset 0 1px 2px rgba(0,0,0,0.08);
+	right:0;
+    background:#252525;
+}
+
+    div.input.focus {
+        border:1px solid #9ecbe2;
+        box-shadow:0 0 10px #f6180f, inset 0 1px 2px rgba(0,0,0,0.08);
+    }
+    
+div.re-input {
+	position:absolute;
+    width:250px;
+    padding:3px 15px 7px 15px;
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+    border:1px solid #525252;
+
+    box-shadow:inset 0 1px 2px rgba(0,0,0,0.08);
+	right:0;
+    background:#252525;
+}
+
+    div.re-input.focus {
+        border:1px solid #9ecbe2;
+        box-shadow:0 0 10px #f6180f, inset 0 1px 2px rgba(0,0,0,0.08);
+    }
+
+input#s {
+    width:100%;
+    border:0;
+    border-radius:20px;
+    background:transparent;
+    height:13px;
+    color:#b4bdc4;
+    position: relative;
+    top:2px;
+    font-size:10px;
+}
+    input#s:focus {
+        outline:none;
+    }
+input#re-s {
+    width:100%;
+    border:0;
+    border-radius:20px;
+    background:transparent;
+    height:13px;
+    color:#b4bdc4;
+    position: relative;
+    top:2px;
+    font-size:10px;
+}
+    input#re-s:focus {
+        outline:none;
+    }
+
+input#searchSubmit {
+    width:19px;
+    height:19px;
+    text-indent:-9999px;
+    overflow:hidden;
+    background:url(/resource/refresh/images/search-icon.png) no-repeat;
+    border:0;
+    position:absolute;
+    top:5px; right:13px;
+    z-index:5;
+    display:none;
+    cursor:pointer;
+}
+input#researchSubmit {
+    width:19px;
+    height:19px;
+    text-indent:-9999px;
+    overflow:hidden;
+    background:url(/resource/refresh/images/search-icon.png) no-repeat;
+    border:0;
+    position:absolute;
+    top:5px; right:13px;
+    z-index:5;
+    display:block;
+    cursor:pointer;
+}
+html.ie7 div.input {
+	padding-right:0;
+	padding-left:0;
+}
+html.ie7 #searchForm fieldset{
+	margin-left:0;
+}
+html.oldie input#searchSubmit {
+	right:5px;	
+	padding-left:0;
+	padding-right:0;	
+}
+
+/*
+ * SPLASH
+ */
+#container.splash{
+	background:#fff url(/resource/refresh/images/splash/bg_splash.png) top left repeat-x;
+}
+
+ul.splash{
+	width:1000px;
+}
+
+ul.splash li{
+	text-align: center;
+	float:left;
+}
+.splash h2{margin: 120px 0 30px 0;}
+
+/* 12/15/2011   VAV    Old bigYouTube code */
+/*
+div.bigYouTube{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	display:none;
+}
+
+*/
+
+/* 12/15/2011   VAV    New bigYouTube code */
+div.bigYouTube{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index:998;
+	display:block;
+	background:#000;
+}
+#container.splash h1{
+	position:absolute;
+	top:0;left:50px;
+	z-index: 888;
+	width:122px;height:122px;
+}
+
+/* 12/15/2011   VAV    Old SPlash badge style */
+/*
+a#splash-badge{
+	position:absolute;
+	top:0px;left:50px;
+	display:block;
+	width:122px;height:122px;
+	background: url(/resource/refresh/images/splash/bg_badge-noRepeat.png) top left;}
+
+a#splash-badge:hover{background-position: top right;}
+
+*/
+
+/* 12/15/2011   VAV    New Splash badge style */
+
+a#splash-badge{
+	position:absolute;
+	top:0px;
+	right:50px;
+	display:block;
+	width:132px;height:132px;
+	background: url(/resource/refresh/images/splash/bg_badge-noRepeat.png) top center;
+	z-index: 999;
+}
+
+a#bigYouTube-exit{
+	position:absolute;
+	top:20px;right:30px;
+	font:normal 50px/1 "Swiss721 Bold";
+	z-index: 999;}
+
+a#bigYouTube-exit:hover{color:#fff;}
+
+/*
+ * INDEX
+ */
+.home-background{
+	background:url(/resource/refresh/images/home/buckets_bg-noRepeat.jpg) no-repeat top center;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#container.home, #container.home #main{
+	background:#262326; 
+}
+
+#homecycle-container{
+	position:relative;
+	width:100%;
+	height:723px;
+	margin-bottom: -70px;
+}	
+
+/* 11-18-11		VAV		Crea spec style to control height of upper area of home page, and thus height of sect below */
+#container.home #homecycle-container{
+	position:relative;
+	width:100%;
+	height:725px;
+	margin-bottom: -70px;
+}	
+
+#homecycle-container > .center996px{
+	height:630px;
+}
+#ul-homecycle{
+	width:100%;
+	height:630px;
+	margin:0 0 -138px 0;
+	overflow:hidden;
+}	
+
+#ul-homecycle > li{
+	width:100%;
+}
+
+/* ******************************************	
+** 01/03/2012		VAV		Home page (people) was here See file g-shock_life.css for individual contents of <li>s 
+** *****************************************/
+    /*                                                                */	
+	/* ************************************************************** */
+
+/* 11/14/2011		VAV		There are left and right panels overlaying the big background image at the top of the home page.
+                            The controlling css for this is in the LIFESYLE section.
+                            See '#ul-homecycle li div.center996px div.left_498'
+                            and '#ul-homecycle li div.center996px div.right_498' 
+*/	
+	
+	
+img.img-playvideo{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-29px 0 0 -33px;
+	/* z-index:100px; */    /* Removed z-index from style */
+}	
+#homecycle-carousel-container{
+	position:absolute;
+	width:996px;
+	height: 78px;
+	/*margin:-80px auto 0;*/
+	overflow:hidden;
+	bottom:80px;
+	left:50%;
+	margin-left:-498px;
+	background:url(/resource/refresh/images/bg_trans-black25.png) repeat;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	z-index: 998;
+}
+#homecycle-carousel{
+	margin:2px auto 0;
+	height:75px;
+	width:926px;
+	overflow: hidden;
+	bottom:0px;
+	position: absolute;
+	left:50%;
+	margin-left:-463px;
+	z-index:999;
+}
+#homecycle-carousel > li{
+	position:relative;
+	float:left;
+	margin:0 0 3px 2px;
+	height: 72px;
+	width:100%;
+	display:block;
+}
+#homecycle-carousel > li:first-child{
+	margin-left:0px;
+}
+#homecycle-carousel > li a{
+	display:block;
+	width:183px;
+	float:left;
+	margin-left:2px;
+	background:#000;
+}
+#homecycle-carousel > li a img{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+
+}
+#homecycle-carousel > li a:first-child{
+	margin-left:0;
+}
+#homecycle-carousel > li a.active img{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	opacity: 1;
+}
+#home-twittericon{
+	float: left;
+	margin-right: 13px;
+	display: block;
+}
+
+a#btn-homecycle-prev,
+a#btn-homecycle-next{
+	display:block;
+	position: absolute;
+	top:50%;
+	left:0;
+	margin-top:-30px;
+	height:61px;
+	width:27px;
+	background:url(/resource/refresh/images/home/arr_slider-halfcircle-sprite.png) top left no-repeat;
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+}
+a#btn-homecycle-next{
+	background-position: top right;
+	left:auto;
+	right:0;
+}
+#ul-homebuckets{
+	width:999px;
+	margin:5px auto 0;
+	clear:both;
+	left:-3px;
+	overflow: auto;
+	z-index: 999;
+}
+#ul-homebuckets > li{
+	position:relative;
+	float:left;
+	margin:0 0 0 5px;
+}
+.ie7 #ul-homebuckets > li{
+	margin:0 0 5px 5px;
+}
+#ul-homebuckets > li a{
+	display:block;
+}
+
+/* ************************************************************** */
+/* 10/25/2011		VAV		Moving inline css for video from home page to hear 
+
+*/
+
+.home_carousel_video
+{
+    background-repeat: no-repeat;
+    width:179px;
+    height:110px;
+    position:absolute;
+    top: 300px;
+    left: 400px;
+    z-index:500;
+}
+
+/*                                                                */	
+/* ************************************************************** */
+
+
+/*
+ * ALL WATCHES
+ */
+#bg { position: fixed; top: 0; left: 0; }
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }
+
+#container.watches #main{
+	position:relative;
+	top:120px;
+	overflow:auto;
+}
+div.watches-nav{
+	position:relative;
+	float:left;
+	width:115px;
+	background:url(/resource/refresh/images/bg_trans-black60.png);
+	margin-right:3px;
+	font:normal 10px/14px Helvetica, Arial;
+	
+	-webkit-border-radius: 3px;
+	-webkit-border-top-right-radius: 0;
+	-moz-border-radius: 3px;
+	-moz-border-radius-topright: 0;
+	border-radius: 3px;
+	border-top-right-radius: 0;
+/*	behavior: url(/resource/refresh/stylesheet/PIE.htc);*/
+}
+.watches-nav > h3{
+	margin:0 0 8px 15px!important;
+	color:#979797 !important;
+	letter-spacing:0.09em;
+	font:normal 10px/1 Helvetica, Arial!important;
+	text-shadow:none !important;
+
+}
+.watches-nav > h3:first-child{
+	margin-top:14px !important;
+}
+.watches-nav > ul{
+	margin:0 0 13px 16px;
+}
+.watches-nav > ul:last-child{
+	margin-bottom:18px;
+}
+.watches-nav > ul li{
+	position:relative;
+	display:block;
+	height:20px;
+	margin:0 0 3px 0;
+}
+html.oldie .watches-nav > ul li{
+	margin-bottom:5px;
+}
+.watches-nav > ul li > a{
+	position:relative;
+	display:inline-block;
+	padding:0 7px;
+	height:20px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color:#444;
+	font:normal 9px/20px "Swiss721 Bold", Helvetica;
+
+	-moz-box-shadow:inset 0 -1px 5px #000000;
+    -webkit-box-shadow:inset 0 -1px 5px #000000;
+    box-shadow:inset 0 -1px 5px #000000;
+    
+    text-shadow:0 1px 0px #fff;
+    
+    border-bottom:1px solid #000;
+	border-top:1px solid #111;
+	background:#afafaf url(/resource/refresh/images/btn-gradient-fff.png) top left repeat-x; /* Old browsers */
+}
+html.oldie .watches-nav > ul li > a{
+	behavior: url(../stylesheet/PIE.htc);
+}
+.watches-nav > ul li > a:not(.active):hover{
+	background:#fff;
+    -moz-box-shadow:inset 0 -1px 5px #000000;
+    -webkit-box-shadow:inset 0 -1px 5px #000000;
+    box-shadow:inset 0 -1px 5px #000000;
+    
+}
+.watches-nav > ul li > a.active{
+	background:#f6180f url(/resource/refresh/images/btn-gradient-inactive.png) top left repeat-x;
+	color:#fff;
+	cursor:default;
+	
+	text-shadow:0 1px 1px #990000;
+	
+	-moz-box-shadow:inset 0 2px 5px #330000;
+    -webkit-box-shadow:inset 0 2px 5px #330000;
+    box-shadow:inset 0 2px 5px #330000;
+    
+    border-bottom:1px solid #555;
+    border-top:1px solid #000;
+    height:19px;
+}
+.watches-nav > ul li > a:not(.active):active{
+	top:1px;
+}
+div.watches-body{
+	position:relative;
+	float:left;
+	width:878px;
+	margin:0 0 20px 0;
+}
+#container.watches-detail{
+	overflow: auto;
+}
+.watches-series-container{
+	position:relative;
+	clear:both;
+	display:block;
+	margin-bottom:10px;
+	
+	width:100%;
+	
+	overflow:hidden;
+
+}
+.watches-series-container > h2{
+	position:relative;
+	height:25px;
+	background:#f6180f;
+	font:normal 15px/25px "Swiss921 Alt", "Helvetica Neue", Helvetica;
+	letter-spacing:0.085em;
+	color:#fff;
+	text-indent:20px;
+	margin-bottom:3px;
+	overflow:hidden;
+	text-shadow: 0 1px 0px #990000;
+}
+div.watches-series-list{
+	height:188px;
+	background:url(/resource/refresh/images/watches/bg_series-noRepeat.png) top left no-repeat;
+	overflow:hidden;
+}
+div.watches-body.all div.watches-series-list{
+	height:188px;
+	background:url(/resource/refresh/images/watches/bg_series-noRepeat.png) top left no-repeat;
+	overflow:hidden;
+	margin-bottom:4px;
+}
+div.watches-series-list ul{
+	position:relative;
+	overflow:auto;
+}
+.watches-body.readmore div.watches-series-list{
+	margin-top:-3px;
+	background:url(/resource/refresh/images/watches/bg_series-solid-noRepeat.png) top left no-repeat;
+}
+.watches-body.readmore div.watches-series-list ul li{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}
+div.watches-series-list ul.center{
+	left:50%;
+	margin:0 auto;
+	float:left;
+	overflow:visible;
+}
+ul.center{
+	left:50%;
+	margin:0 auto;
+	float:left;
+	overflow:visible;
+}
+ul.center li{
+	right:50%;
+}
+
+/* 11/03/2011		VAV		Changing min-width from 125px to 120px */
+div.watches-series-list ul li{
+	position:relative;
+	float:left;
+	margin-left:0px;
+	/*display:inline-block;*/
+	min-width:120px;
+	width:120px;
+}
+div.watches-series-list ul.center li{
+	right:50%;
+}
+div.watches-series-list ul li a{
+	font:normal 10px/36px "Swiss721 Bold", Helvetica;
+	display:block;
+	text-align: center;
+	position:relative;
+	overflow: auto;
+	color:#2a2a2a;
+}
+div.watches-series-list ul li a:hover{
+	background:url(/resource/refresh/images/bg_trans-white10.png);
+	color:#f6180f;
+}
+div.watches-series-list ul li a:active{
+	color:#f6180f;
+
+}
+div.watches-series-list ul li a img{
+	display:block;
+	margin:4px auto 0;
+	min-width:100px;
+	height:152px;
+}
+
+.numberCount{
+	position:absolute;
+	float:right;
+	right:10px;
+	padding:0 6px;
+	font:normal 10px/24px Arial, Helvetica, sans-serif;
+	font-weight:bolder;
+	text-shadow: 0px 1px 1px #400;
+	
+	text-indent:0;
+	letter-spacing: normal;
+    
+}
+.numberCount a{
+	display: inline-block;
+	margin:0 10px 0 0;
+	color:#fff;
+	text-decoration: none;
+}
+.numberCount a:hover{
+	text-decoration: underline;
+}
+
+/*
+ * WATCHES - DETAIL
+ */
+
+.watches-detail div.watches-body{
+	float:none;
+	width:996px;
+}
+.watches-detail div.watches-body.readmore{
+	width:878px;
+	float:left;
+}
+.watches-detail #main{
+	top:120px;
+}
+.watches-detail .watches-series-container{
+	background:#fff url(/resource/refresh/images/watches/detail/bg_noRepeat.png) no-repeat top left;
+	height:inherit;
+}
+.watches-detail .watches-series-container > h2{
+	height:25px;
+	background:#f6180f;
+	font:normal 15px/25px "Swiss921 Alt", "Helvetica Neue", Helvetica;
+	letter-spacing:0.085em;
+	color:#fff;
+	text-indent:20px;
+	margin-bottom:0px;
+	overflow:hidden;
+}
+.watches-detail span.breadcrumbs{
+	position: absolute;
+	left:500px;
+	font:normal 9px/25px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-indent:0;
+}
+.watches-body span.breadcrumbs{
+	left:362px;
+}
+.watches-detail .watches-series-container > h2 > span.breadcrumbs a{
+	color:#fff;
+}	
+.watches-detail .watches-series-container > h2 > span.breadcrumbs a:hover{
+	border-bottom:1px solid #fff;
+}
+.watches-detail ul.reg-2col{
+	margin:25px auto;
+	/*width:996px;*/
+	overflow:hidden;
+}
+.watches-detail ul.reg-2col > li{
+	width:495px;
+}
+.watches-detail ul.reg-2col > li:first-child{
+	text-align: center;
+	width:500px;
+}
+.watches-detail-cycle{
+	width:500px;
+	
+}
+.watches-detail-cycle li{
+	position:relative;
+	width:100%;
+
+}
+.watches-detail-pager{
+	position:absolute;
+	bottom:-90px;
+	z-index:10;
+	left:50%;
+	
+	width:376px;
+	overflow:auto;
+	margin:0 0 0 -192px;
+}
+.watches-detail-pager li{
+	float:left;	
+	margin:0 0 4px 1px;
+	border:4px solid #cdcdcd;
+	height:70px;
+}
+.watches-detail-pager li.active{
+	border:4px solid #fb1108;		
+}
+
+.watches-detail-pager li a{
+	display:block;
+}
+.watches-detail-pager li a img{
+	width:84px;
+	height:70px;
+}
+.watches-detail ul li h2{
+	font:normal 36px/1.2 "Swiss921 Alt", "Helvetica Neue", Helvetica;
+	color:#141414;
+	text-shadow:0 1px 1px #fff;
+}
+
+.watches-detail .watches-detail-specifications{	
+	height:170px;
+	overflow:hidden;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	margin:10px 8px 0 0;
+}
+#container.watches-detail .overview p{
+	width:95%;
+	font:normal 11px/1.2 Arial;
+}	
+#container.watches-detail .watches-body.readmore .overview h3{
+	font:normal 16px/1 "Swiss721 Bold";
+	margin:0 0 3px 12px;
+	float:left;
+}
+html.oldie #container.watches-detail .watches-body.readmore .overview h3{
+	font:bold 16px/1 Helvetica, Arial, sans-serif;
+	letter-spacing:normal;
+}
+#container.watches-detail .watches-body.readmore .overview p{
+	font:normal 12px/1.4 Arial;
+	width:325px;
+	margin:0 0 30px 12px;
+	float:left;
+}
+.reg-2col li.col-2 p{
+	text-shadow: 0 1px 0px white;
+}
+
+/* 12/16/2011		VAV		  Changed 'list-style:disc inside' to 'list-style:disc inside' */
+.reg-2col li.col-2 > ul{
+	margin:10px auto 10px 18px;
+	position: relative;
+	list-style:disc inside;
+
+}
+.reg-2col li.col-2 > ul li{
+	margin-bottom:3px;
+		/*font:normal 14px/1.5 "Swiss721 Bold", Helvetica, Arial;*/
+}
+
+.reg-2col li.col-2 > ul.watches-body-purchase{
+	position:relative;
+	list-style:none;
+	list-style-type:none;
+	margin:0;
+	overflow: hidden;
+	padding-bottom:10px;
+}
+.reg-2col li.col-2 > ul.watches-body-purchase li{
+	display: block;
+	position: relative;
+	float:left;
+	margin:30px 0 25px 10px;
+	height:30px;
+	line-height:30px;
+}
+.reg-2col li.col-2 > ul.watches-body-purchase li:first-child{
+	margin-left:0;
+	margin-right:10px;
+	color:#1a1a1a;
+	font: normal 28px/30px "Swiss921 Alt", "Helvetica Neue", helvetica;
+}
+
+/*  12/16/2011		VAV		Added style to control width of description text on watches-deatail.tpl  */
+.reg-2col li.col-2 > div#desc
+{
+    max-width:445px
+}
+
+#container.watches-detail h3{
+	font: normal 13px/1.2 "Swiss921 Alt", "Helvetica Neue", helvetica;
+	color:#141414;
+	text-shadow:0 1px 1px #fff;
+	margin:20px 0 10px;
+}
+.btn-prevnext-watchdetail{
+	position: absolute;
+	top:0px;
+	right:20px;
+	height:38px;
+	width:30px;
+	background:url(/resource/refresh/images/arr_rednav-sprite.png) top left no-repeat;
+}
+.btn-prevnext-watchdetail:active{
+	top:1px;
+}
+
+#btn-watchdetail-prev{
+	background-position: top left;
+	right:60px;
+}
+
+#btn-watchdetail-next{
+	background-position: top right;
+}
+.watches-body.readmore ul.reg-2col > li:first-child{
+	width:360px;
+}
+
+
+.checkeredborder{
+	display: inline-block;
+	position:relative;
+	background:url(/resource/refresh/images/bg_checkered.png) repeat;
+	float:left;
+	
+}
+.checkeredborder > img{
+	display:block;
+	float:none;
+	margin:8px;
+}
+
+
+
+
+
+/*
+ * LIFESTYLE PAGE
+ */
+ 
+
+#container.life h3, #container.toughness h3, #container.technology h3, #container.buy h3  {
+	/*line-height: 58px;*/
+	color: #fff;
+	font-weight:normal;
+	font-family: "Swiss921 Alt", "Helvetica Neue", Helvetica;
+	font-size: 18px;
+	letter-spacing: -0.025em;
+	text-transform:uppercase;
+	margin:210px 0 20px 17px;
+}
+#container.toughness h3,#container.life h3,#container.buy h3{
+	margin-top:20px;
+}
+
+#container.life h4 {
+	color: #2b2b2b;
+	font-family: "Swiss921 Alt", "Helvetica Neue", Helvetica;
+	font-size: 22px;
+	letter-spacing: -0.025em;
+	text-transform:uppercase;
+	line-height: 48px;
+}
+
+#container.life h5 {
+	color: #737373;
+	font-family: "Swiss921 Alt", "Helvetica Neue", Helvetica;
+	font-size: 12px;
+	letter-spacing: -0.015em;
+	text-transform:uppercase;
+	line-height: 48px;
+	margin-top: 50px;
+	clear:both;
+}
+
+#container.life p {
+	color: #4a4a4a;
+	font:normal 12px/14px;
+}
+
+#container.life div.watches-series-list, #container.events div.watches-series-list, #container.toughness div.watches-series-list  {
+	background-image:none;
+	width: 630px;
+	clear:both;
+}
+
+#container div.watches-series-list ul li:first-child {
+	margin-left: 0;	
+}
+
+#container.life #homecycle-container  {height: 360px;}
+
+/* 01/06/2012		VAV		Increased z-index from 100 to 999 */
+#container.life .home-background, 
+#container.events .home-background, 
+#container.toughness .home-background,
+#container.technology .home-background,
+#container.buy .home-background,
+#container.news .home-background,
+#container.videos .home-background,    /* 12/07/2011		VAV		Added a style for 'videos' that is a duplicate for every style for 'news' */
+#container.press .home-background      /* 12/12/2011		VAV		Added a style for 'press' that is a duplicate for every style for 'news' */
+{
+	background-position: 50% 188px; z-index:999;
+}
+
+/* 10/24/2011		VAV		changed ../ to /resource/refresh on belo style*/
+/* ******************************************	
+** 01/03/2012		VAV		Athletes (people) was here. See file g-shock_life.css for individual contents of <li>s 
+** *****************************************/
+
+/* ******************************************	
+** 01/03/2012		VAV		G-Shock Life (people) was here.  See file g-shock_life.css for individual contents of <li>s 
+** *****************************************/
+ul.life-2col{
+	position:relative;
+	overflow:auto;
+}
+ul.life-2col > li{
+	position:relative;
+	float:left;
+}
+ul.life-2col li.life-2col-left{
+	background:url(/resource/refresh/images/bg_trans-black60.png) repeat;
+	width:660px;
+	margin-right: 6px;
+}
+ul.life-2col li.life-2col-right{
+	margin-top: 188px;
+	width:330px;
+	min-height: 365px;
+}
+
+ul.life-2col > li.life-2col-left div.content
+{
+	position:relative;
+	margin: 7px auto;
+	width:644px;
+	background:#fff;
+	min-height: 950px;
+	border:solid 0px red;
+}
+
+.content-holder {margin: 0 30px; padding: 0 0 30px 0;clear:both;}
+
+li.life-2col-right a{display: block; margin-bottom:2px;}
+
+
+.content-holder p {margin: 0 0 12px 0;} /*Removed "clear:both;" from the last line here 1/4/12 */
+
+.content-holder.support ul{
+	margin: 0 0 12px 12px;
+	clear: both;
+	list-style-type: disc;
+	list-style-position: inside;
+}
+.content-holder.support ul li{margin: 0 0 3px 0; clear:both;}
+
+#photo-nav-container{
+	position:relative;
+	width:360px;
+	height:40px;
+	left:30px;
+}
+ul#photo-nav {
+	position:relative;
+	height: 40px;
+}
+ul#photo-nav li {
+	margin-right: 2px;
+	float: left;
+	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}
+
+#movie-slideshow{
+	/*position: absolute;
+	top: 0;*/
+}
+
+ul#movie-nav {
+	width: 320px;	
+	height: 60px;
+	
+}
+ul#movie-nav li {
+	margin-right: 2px;
+	float: left;
+}
+
+/*
+ * EVENTS 
+ */
+ 
+#container.events h3,
+#container.news h3, 
+#container.videos h3,       /* 12/07/2011		VAV		Added a style for 'videos' that is a duplicate for every style for 'news' */
+#container.press h3         /* 12/12/2011		VAV		Added a style for 'press' that is a duplicate for every style for 'news' */
+{
+	line-height: 18px;
+	color: #fff;
+	font-family: "Swiss921 Alt", "Helvetica Neue", Helvetica;
+	font-size: 18px;
+	letter-spacing:0.085em;
+	text-transform:uppercase;
+	margin-bottom: 10px;
+} 
+ 
+#container.events h4, 
+#container.toughness h4, 
+#container.technology h4, 
+#container.news h4, 
+#container.videos h4,         /* 12/07/2011		VAV		Added a style for 'videos' that is a duplicate for every style for 'news' */
+#container.press h4           /* 12/12/2011		VAV		Added a style for 'press' that is a duplicate for every style for 'news' */
+{
+	color: #2b2b2b;
+	font-family: "Swiss921 Alt", "Helvetica Neue", Helvetica;
+	font-size: 22px;
+	letter-spacing: -0.025em;
+	text-transform:uppercase;
+	line-height: 48px;
+} 
+
+#container.events h5, 
+#container.toughness h5, 
+#container.news h5, 
+#container.videos h5,          /* 12/07/2011		VAV		Added a style for 'videos' that is a duplicate for every style for 'news' */ 
+#container.press h5            /* 12/12/2011		VAV		Added a style for 'press' that is a duplicate for every style for 'news' */ 
+{
+	color: #737373;
+	font-weight:normal;font-family: "Swiss921 Alt", "Helvetica Neue", Helvetica;
+	font-size: 12px;
+	letter-spacing: -0.025em;
+	text-transform:uppercase;
+	line-height: 48px;
+	margin-top: 0px;
+	clear:both;
+}
+
+h5.top50{
+	margin-top:50px!important;
+}
+
+.content-holder.nobreak{
+	margin-bottom:-10px;
+	padding:0;
+	/*margin-top:-50px;*/
+}
+
+.content-holder > h5{
+	position: relative;
+	margin:-40px 0 0 0;
+}
+
+h5.photosandvideo{
+	margin-top:0 !important;
+	text-indent:30px;
+}
+
+#container.life #homecycle-container, 
+#container.events #homecycle-container, 
+#container.toughness #homecycle-container, 
+#container.technology #homecycle-container, 
+#container.buy #homecycle-container, 
+#container.news #homecycle-container,
+#container.videos #homecycle-container,         /* 12/07/2011		VAV		Added a style for 'videos' that is a duplicate for every style for 'news' */
+#container.press #homecycle-container           /* 12/12/2011		VAV		Added a style for 'press' that is a duplicate for every style for 'news' */
+{
+	height: 340px; 
+	/*z-index:-300;*/
+}
+
+#container.events ul.life-2col li.life-2col-right, 
+#container.technology ul.life-2col li.life-2col-right, 
+#container.buy ul.life-2col li.life-2col-right, 
+#container.news ul.life-2col li.life-2col-right,
+#container.videos ul.life-2col li.life-2col-right,		  /* 12/07/2011		VAV		Added a style for 'videos' that is a duplicate for every style for 'news' */ 
+#container.press ul.life-2col li.life-2col-right		  /* 12/12/2011		VAV		Added a style for 'press' that is a duplicate for every style for 'news' */ 
+{
+	margin-top: 0;
+	width:328px;
+	background:url(/resource/refresh/images/bg_trans-black60.png) repeat;
+
+}
+
+#container.events #homecycle-container{
+	height:455px;
+	background:#131d27;
+	overflow:hidden;
+}
+
+/* ******************************************	
+** G-Shock Life 
+** *****************************************/
+
+
+
+/* 11/08/2011		VAV		Re-did style controlling images on event and athlete pages */
+#ul-homecycle li div.center996px div.left_498 
+{
+	float:left;
+	position:absolute;
+	height:385px;
+	width:990px;
+	margin:0px;
+	padding:0px;
+	border:solid 0px blue;
+	text-align:left;
+	align:left;			
+	z-index:300;
+}
+
+	#ul-homecycle li div.center996px div.left_498 h2
+	{
+	    font: normal 60px/1 "Swiss921 Alt";
+	    color: white;
+	    top: 0px;
+		margin: 0px;
+		padding:0px;
+	    position: relative;
+    }
+
+    /* 10/28/2011		VAV		Created style to control img position for left side top foreground image */
+	#ul-homecycle li div.center996px div.left_498 img
+	{
+    	margin: 0px 0px 0px 0px;
+	    padding:0px;
+    	border:0px;
+	    position: relative;
+    }
+
+
+#ul-homecycle li div.center996px div.right_498 
+{
+	float:right;
+	position:absolute;
+	height:385px;
+	width:990px;
+	margin:0px;
+	padding:0px;
+	border:solid 0px red;
+	text-align:right;
+	align:right;			
+	z-index:200;
+}
+
+	#ul-homecycle li div.center996px div.right_498 h2
+	{
+		font: normal 60px/1 "Swiss921 Alt";
+		color: white;
+		top: 0px;
+		margin: 0px;
+		position: relative;
+	}
+	
+	/* 10/28/2011		VAV		Created style to control img position for left side top foreground image */
+	#ul-homecycle li div.center996px div.right_498 img
+	{
+		margin: 0px 0px 0px 0px;
+		border:0px;
+		align:right;
+		position: relative;
+}
+
+
+/* 12/12/2011		VAV		New style for putting generic titles on pages using h2 */
+#ul-homecycle li.g-shock_default div.center996px h2,
+#ul-homecycle li.videos div.center996px h2,
+#ul-homecycle li.press div.center996px h2,
+#ul-homecycle li.news div.center996px h2
+{
+	font: normal 60px/1 "Swiss921 Alt";
+	color: white;
+	top: 135px;
+	margin: 40px auto;
+	position: relative;
+}
+
+/* 10/18/2011		VAV		'life/archive' links mis-formatting with new design.  I think I can use a variation of the previous style to create a new one to address this problem.  */
+
+#container.events .content-left-col {
+	width: 360px;	
+	margin-right: 20px;
+	float: left;
+}
+#container.events .content-left-col.noflickr {
+	width:580px;
+}
+#container.events .content-right-col {
+	width: 180px;
+	float: right;
+}
+
+#container.events .content-left-col.noflickr {
+width:580px; /*I increased the width a tad more since last time*/
+}
+
+.seven-px-margin{
+	margin: 7px;
+	background-color: #171717;
+}
+#flickr {
+	position:relative;
+	left:-3px;
+}
+#flickr li {
+	position:relative;
+	float: left;
+	margin-left: 3px;
+}
+img.seve-px-margin {
+	margin-bottom: 2px;
+}	
+
+.flickr-logo {
+	float: left;
+	margin: 0 0 0 3px;
+}
+
+/*
+ * SUPPORT 
+ */
+li.support {
+		height:100%;
+		background:url(/resource/refresh/images/toughness_1/g_shock_toughness_1_bg.jpg) bottom center no-repeat;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+}
+
+
+
+
+/*
+ * TOUGHNESS 
+ */
+li.toughness {
+		height:100%;
+		background:url(/resource/refresh/images/toughness_1/g_shock_toughness_1_bg.jpg) top center no-repeat;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+}
+li.history {
+		height:100%;
+		background:url(/resource/refresh/images/toughness_1/history_bkg.jpg) top center no-repeat;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+}
+li.technology-design {
+		height:100%;
+		background:url(/resource/refresh/images/toughness_1/technology-design_bg.jpg) top center no-repeat;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+}
+li.shock-resistant {
+		height:100%;
+		background:url(/resource/refresh/images/toughness_1/shock-resistant_bg.jpg) top center no-repeat;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+}
+
+div.content-holder img {
+	float:left;
+	margin: 0px 10px 10px 0;
+	vertical-align:text-top;
+}
+
+/*
+ * TECHNOLOGY
+ */
+
+li.technology {
+		height:100%;
+		background:url(/resource/refresh/images/technology/g_shock_technology_bg.jpg) bottom center no-repeat;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover; 
+		
+}
+
+/* 12/02/2011		VAV		Added two styles to add flexibily to technology section.  I may not use these */
+li.technology-solar {
+		height:100%;
+		background:url(/resource/refresh/images/technology/g_shock_technology_bg.jpg) bottom center no-repeat;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover; 
+		
+}
+
+li.technology-atomic {
+		height:100%;
+		background:url(/resource/refresh/images/technology/g_shock_technology_bg.jpg) bottom center no-repeat;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover; 
+		
+}
+
+
+#container.technology h3 {
+	/*line-height: 58px;*/
+	color: #fff;
+	font-weight:normal;font-family: "Swiss921 Alt", "Helvetica Neue", Helvetica;
+	font-size: 18px;
+	text-transform:uppercase;
+}
+
+#container.technology ul.life-2col li.life-2col-right{
+	margin-top: 0;
+	width:328px;
+	background:url(/resource/refresh/images/bg_trans-black60.png) repeat;
+}
+
+#container.technology .seven-px-margin {
+	background: none;
+}
+/*
+ * BUY
+ */
+#container.buy h2  {
+	color: #2b2b2b;
+	font-family: "Swiss921 Alt", "Helvetica Neue", Helvetica;
+	font-size: 28px;
+	letter-spacing:-0.015em;
+	text-transform:uppercase;
+	line-height: 60px;
+} 
+
+#container.buy .content-holder {
+	padding-bottom: 0px!important;
+}
+.wheretobuy-flags{margin-left:20px}
+.buy-headers{
+	color: #656363;
+	font-family: "Swiss921 Alt", "Helvetica Neue", Helvetica;
+	font-size: 14px;
+	text-transform:uppercase;
+	line-height: 14px;
+	margin-bottom: 15px;
+}
+
+.small {
+	font-size: 85%;	
+}
+
+.flag-icon {
+	vertical-align: bottom;
+	margin: 22px 0px 0px 4px ;
+}
+
+.where-to-buy-btn {
+	float: left;
+	width:147px;
+	height:101px;
+	margin: 2px 2px 2px 2px;
+}
+
+#container.buy li.life-2col-right a {
+	margin: 0;	
+}
+
+#container.buy .seven-px-margin {
+	margin: 7px;
+	background-color: #171717;
+	padding: 6px;
+	min-height: 358px;
+}
+
+ul.search {
+	margin-bottom: 85px;
+	height: 90px;
+
+}
+	
+ul.search li{
+	float: left;
+}
+
+li.city-info {
+	width: 280px;
+}
+
+li.search-details {
+	width:200px;	
+}
+
+.distance-select {
+	margin-right: 5px;
+}
+
+ul.store {
+	height: 10px;
+	margin-bottom: 5px; 
+}
+ul.store li{
+	float: left;
+}
+
+ul.store-info {
+	overflow: auto;
+}
+
+ul.store-info li{
+	float: left;
+	
+}
+
+li.store-name-header {
+	width: 280px;
+
+}
+
+li.store-number-header {
+	width:130px;
+}
+
+li.store-distance-header {
+	width:130px;
+}
+
+li.store-name {
+	width: 280px;
+	margin: 10px 0 10px 30px;
+
+}
+
+li.store-number{
+	width:130px;
+	margin-top: 10px;
+}
+
+li.store-distance{
+	width:130px;
+	margin-top: 10px;
+}
+
+.even {
+	background-color: #e3e3e3;
+	margin-bottom: 1px;
+}
+
+.odd {
+	background-color: #f0f0f0;
+	margin-bottom: 1px;
+}
+
+.header {
+	color:#515151;
+	font-family: "Swiss921 Alt", "Helvetica Neue", Helvetica;
+	font-size: 10px;
+	text-transform:uppercase;
+	line-height: 10px;
+	
+}
+
+
+/*
+ * NEWS
+ */
+ li.news {
+		height:100%;
+		background:url(/resource/refresh/images/news/bg_gshock_news_noRepeat.jpg) bottom center no-repeat;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+}
+ 
+
+/* 12/07/2011		VAV		Created section and style for videos */
+
+/*
+ * VIDEOS
+ */
+ li.videos {
+		height:100%;
+		background:url(/resource/refresh/images/news/bg_gshock_news_noRepeat.jpg) top center no-repeat;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+}
+ 
+.videos .content-holder
+{
+    margin:auto;
+}
+
+.press .content-holder
+{
+    margin:auto;
+}
+li.descent-part-2 {
+	height:100%;
+	background:url(/resource/refresh/images/events/descent2_life_bkg.jpg) top center no-repeat;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+}
+
+/*
+ * COLLECTIONS
+ */
+ #container.collection div.center996px{
+       top: 140px;
+       margin: 0 auto 140px auto;
+       
+ }
+ .collection-holder {
+       position: relative;
+       height: 307px;
+       width: 100%;
+       margin: 0 0 30px 0;
+       padding:0;
+ }
+
+ div.aviation {
+               background:url(/resource/refresh/images/collections/aviation_collection_bg.jpg) bottom center no-repeat;
+			-webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    background-size: cover;
+ }
+
+ div.classic {
+               background:url(/resource/refresh/images/collections/classic_collection_bg.jpg) bottom center no-repeat;
+			-webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    background-size: cover;
+ }
+
+div.master_of_g {
+               background:url(/resource/refresh/images/collections/master_collection_bg.jpg) bottom center no-repeat;
+			-webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    background-size: cover;
+ }
+
+div.limited {
+               background:url(/resource/refresh/images/collections/limited_collection_bg.jpg) bottom center no-repeat;
+			-webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    background-size: cover;
+ }
+
+/* 11/22/2011		VAV		Added style for giez on collection template */
+ div.giez {
+               background:url(/resource/refresh/images/collections/limited_collection_bg.jpg) bottom center no-repeat;
+			-webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    background-size: cover;
+ }
+
+div.collection-content{
+       margin-left: 415px;
+       width: 485px;
+       z-index: 1;
+ }
+
+.feat-watch{
+       position: absolute;
+       width: 243px;
+       height: 335px;
+       top: -15px;
+       margin-left: 100px;
+ }
+                                       
+ #container.collection div.watches-series-list {
+   background-image: none;
+   clear: both;
+   position: absolute;
+   top: 126px;
+   left:-15px;
+   width: 500px;
+   height:180px;
+}
+
+.collection-p {
+       font-size: 10px;
+}
+
+.collection-p a{
+       color: #f6180f;
+}
+
+a.view-collection{
+       margin: 0;
+       padding: 0 0 0 10px;
+       position: absolute;
+       background-color: #f6180f;
+       bottom: 0;
+       right:0;
+       text-transform: uppercase;
+       font-size:9px;
+       color: #fff;
+       height: 15px;
+       line-height: 15px;
+       width: 100px;
+}
+
+.rule {
+       width: 100%;
+       height: 2px;
+       margin-bottom: 25px;
+}
+
+/*
+ * TIMELINE
+ */
+#container.timeline #main{
+background:url(/resource/refresh/images/home/buckets_bg-noRepeat.jpg) no-repeat top center;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;	
+}
+
+#timeline-container{
+	position:relative;
+	width:100%;
+	height:530px;
+	margin-top:130px;
+	margin-bottom: 100px;
+}
+#timeline-container > .center996px{
+	height:630px;
+}
+#ul-timeline{
+	width:100%;
+	height:500px;
+	margin:0 auto 20px auto;
+}	
+#ul-timeline > li{
+	width:100%;
+	height:100%;
+	text-align: center;
+	background:#000;
+}
+#ul-timeline > li div.center996px{
+	text-align: center;
+}
+	
+#timeline-carousel-container{
+	position:absolute;
+	width:996px;
+	height: 78px;
+	/*margin:-80px auto 0;*/
+	overflow:hidden;
+	bottom:80px;
+	left:50%;
+	margin-left:-498px;
+	background:url(/resource/refresh/images/bg_trans-black25.png) repeat;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	z-index: 998;
+}
+#timeline-carousel{
+	margin:2px auto 0;
+	height:75px;
+	width:926px;
+	overflow: hidden;
+	bottom:0px;
+	position: absolute;
+	left:50%;
+	margin-left:-463px;
+	z-index:999;
+}
+#timeline-carousel > li{
+	position:relative;
+	float:left;
+	margin:0 0 3px 2px;
+	height: 72px;
+	width:100%;
+	display:block;
+}
+#timeline-carousel > li:first-child{
+	margin-left:0px;
+}
+#timeline-carousel > li a{
+	display:block;
+	width:183px;
+	float:left;
+	margin-left:2px;
+	background:#000;
+	color:#fff;
+	text-align:center;
+    font: normal 79px/72px "Swiss921 Alt", "Helvetica Neue", Helvetica;
+	letter-spacing:-0.06em;
+	text-indent:-0.15em;
+}
+#timeline-carousel > li a img{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+
+}
+#timeline-carousel > li a:first-child{
+	margin-left:2px;
+}
+#timeline-carousel > li a.active{
+	background:#f6180f;
+	color:#000;
+}
+#timeline-carousel > li a.active img{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	opacity: 1;
+}
+
+a#btn-homecycle-prev,
+a#btn-homecycle-next{
+	display:block;
+	position: absolute;
+	top:50%;
+	left:0;
+	margin-top:-30px;
+	height:61px;
+	width:27px;
+	background:url(/resource/refresh/images/home/arr_slider-halfcircle-sprite.png) top left no-repeat;
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+}
+a#btn-homecycle-next{
+	background-position: top right;
+	left:auto;
+	right:0;
+}
+
+
+/*
+ * MAILING LIST PAGE
+ */
+
+li.mailinglist {
+       height:100%;
+       background:url(/resource/refresh/images/mailinglist/bg_gshock_mailinglist_noRepeat.jpg) top center no-repeat;
+}
+
+.mail {
+       margin: 0px 0;  
+}
+
+input.mail-input {
+   padding:3px 15px 7px 15px;
+   -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+       border-radius: 3px;
+   border:1px solid #525252;
+   box-shadow:inset 0 1px 2px rgba(0,0,0,0.08);
+   background:#252525;
+       margin: 5px 0 15px 0;
+       width: 256px;
+   color:#fff;
+}
+
+input.mail-input.focus {
+   border:1px solid #9ecbe2;
+   box-shadow:0 0 10px #f6180f, inset 0 1px 2px rgba(0,0,0,0.08);
+}
+
+input.submit-btn {
+       color: #fff;
+       background-color: #F00;
+       border:none;
+       padding:4px 4px 2px 4px;
+}
+
+.bg-none {
+       background-image:none !important;
+}
+
+#container.mailinglist .home-background {
+       background-position: 50% 188px; z-index:100;
+}
+
+#container.mailinglist #homecycle-container {
+       height: 340px;
+       /*z-index:-300;*/
+}
+
+#container.mailinglist ul.life-2col li.life-2col-right {
+       margin-top: 0;
+       width:328px;
+       background:url(/resource/refresh/images/bg_trans-black60.png) repeat;
+}
+
+#container.mailinglist h3 {
+       line-height: 18px;
+       color: #fff;
+       font-family: "Swiss921 Alt", "Helvetica Neue", Helvetica;
+       font-size: 18px;
+       letter-spacing:0.085em;
+       text-transform:uppercase;
+       margin-bottom: 10px;
+}
+
+#container.mailinglist h4 {
+       color: #2b2b2b;
+       font-family: "Swiss921 Alt", "Helvetica Neue", Helvetica;
+       font-size: 22px;
+       letter-spacing:0.085em;
+       text-transform:uppercase;
+       line-height: 48px;
+}
+
+
+/*
+ * SEARCH RESULTS
+ */
+
+ul.search-results {
+	overflow: auto;
+	margin-top:35px;
+}
+
+ul.search-results li{
+	float: left;
+	position:relative;
+	background-color: #f0f0f0;
+	margin-bottom: 1px;
+	display: block;
+	height:90px;
+	width:100%;
+}
+
+ul.search-results li:nth-child(even) {
+	float: left;
+	
+	background-color: #e3e3e3;
+	margin-bottom: 1px;
+}
+ul.search-results li a{
+	display:block;
+	position: relative;
+	font: normal 12px/90px "Swiss721 Bold",Helvetica, Arial;
+	color:#666;
+}
+ul.search-results li a:hover{
+	color:#f6180f;
+}
+ul.search-results li img{
+	position:relative;
+	margin:5px 50px 5px 15px;	
+}
+ul.search-results li:hover{
+	background:#ddd;
+}
+
+
+/*
+ * COMPARE PAGE
+ */
+div.watches-body.compare{
+	width:100%;
+}
+div.compare table tr.compare-header-row th{
+	background: url(/resource/refresh/images/bg_trans-black60.png);
+	font:normal 12px/1 "ArialNarrowBold", Helvetica, Arial;
+	color:#fff;
+	font-weight:normal !important;
+	vertical-align: middle;
+	padding: 3px 0;
+	text-transform: uppercase;
+	margin-bottom: 1px;
+}
+
+div.compare table td{
+	position:relative;
+	background:#fff;
+	font: normal 10px/1.3 "Swiss721 Bold", Helvetica, Arial;
+	text-align: center;
+	vertical-align:middle;
+	padding:2px 0;
+	border-left:1px solid #eee;
+	border-bottom:1px solid #eee;
+}
+div.compare table{
+	width:980px;
+	z-index:5;
+}
+div.compare table.second{
+	z-index:4;
+	margin-top: -30px;
+	width:980px;
+}
+div.compare table.second tr.compare-header-row-normal:hover td{
+	background:#f9f9f9;
+}
+div.compare table tr.compare-header-row-normal.first{
+}
+div.compare table span{
+	position:absolute;
+	background:#fff;
+	border:1px solid #eee;
+	margin:0 5px 5px -51px;
+	color:#333;
+	padding:5px 0px;
+	bottom: 0;
+	left: 50%;
+	text-align:center;
+	width:100px;
+	font: normal 9px/1.3 "Swiss721 Bold", Helvetica, Arial;
+}
+div.compare table span.selected{
+	position:absolute;
+	border:1px solid #f6180f;
+	color:#f6180f;
+	bottom:0;
+	display:block;
+	text-align:center;
+	font: normal 9px/1.3 "Swiss721 Bold", Helvetica, Arial;
+}
+tr.compare-header-row-normal{
+	position:relative;
+	margin-bottom:5px;
+}
+div.compare table .img-watch{
+	position: relative;
+	margin-bottom:27px;
+	border:1px solid #fff;
+	margin-top:3px;
+}
+div.compare table.second tr.compare-header-row-normal:hover td .img-watch{
+	border:1px solid #eee;
+}
+div.compare-fixed{
+	position:relative;
+	height:600px;
+}
+div.comparesection{
+	width:1000px;
+	margin:0 auto;
+}
+
+
+
+
+/*
+ * SCROLLBARS
+ */
+.tinyscroll { width: 488px; clear: both; margin: 20px 0 0; height:170px;}
+.tinyscroll .viewport { width: 95%; height: 170px; overflow: hidden; position: relative; }
+.tinyscroll .overview { list-style: none; position: absolute; left: 0; top: 0; }
+.tinyscroll .thumb .end,
+.tinyscroll .thumb { background-color: #f6180f; }
+.tinyscroll .thumb:hover { background-color:#cc0000;}
+.tinyscroll .thumb:hover .end { background-color:#cc0000;}
+
+.tinyscroll .scrollbar { position: relative; float: right; width: 15px; }
+.tinyscroll .track { background-color: #ccc; height: 100%; width:13px; position: relative; padding: 0 1px; }
+.tinyscroll .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+.tinyscroll .thumb .end { overflow: hidden; height: 5px; width: 13px; }
+.tinyscroll .disable{ display: none; }
+
+.watches-body.readmore .tinyscroll{
+	width:510px;
+}
+.watches-body.readmore .tinyscroll .viewport{
+	height:420px;
+}
+
+
+.compare .tinyscroll{
+	width:996px;
+	margin-top:1px;
+}
+.compare .tinyscroll .viewport{
+	height:470px;
+	width:980px;
+}
+.compare .tinyscroll .track{
+	background:none;
+}
+
+
+/*
+ * FOOTER
+ */	
+	
+footer{
+	position: relative;
+	width:996px;
+	margin:50px auto 0;
+	height:40px;
+	background:#0e0e0e;
+	border-top:1px solid #303030;
+	clear:both;
+	float:none;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	overflow:hidden;
+}
+html.oldie footer{
+	behavior: url(border-radius.htc);
+}
+footer > ul{
+	height:38px;
+}
+footer > ul li{
+	position:relative;
+	padding:0;
+	float:left;
+	height:40px;
+	margin-left:40px;
+	font:normal 8px/36px "Swiss721 Bold", Helvetica;
+}
+html.oldie footer > ul li{
+	margin-left:35px;
+}
+footer a, footer a:visited{
+	letter-spacing:0.12em;
+	color:#ccc;
+}
+
+footer a:hover{
+	color:#fff;
+}
+a#footer-casiologo{
+	display:block;
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:30%;
+
+}
+a#footer-casiologo > img{
+	position:relative;
+	display:block;
+}
+
+/* Added 1/4/12 */
+em{
+	font-style:italic !important;
+}
+em b{
+	font-style:italic !important;
+	font-weight:bold !important;
+}
+i{
+	font-style:italic !important;
+}
+#container.news div.content-left-col p[align='right']:first-child{  /*This basically looks for the first paragraph aligned right within the .content-left-col in the news section and adds a top margin*/
+	margin-top:25px;
+}
+table[align='center']{
+	display:table;
+	margin:0 auto;
+}
+
+/* eo Added 1/4/12 */
+
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.hidden { display: none; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+.clear {zoom: 1; height:0px;}/* for ie 7*/
+
+
+
+@media all and (orientation:portrait) {
+
+}
+
+@media all and (orientation:landscape) {
+
+}
+
+@media screen and (max-device-width: 480px) {
+  
+  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+}
+
+
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+  -ms-filter: none !important; } 
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } 
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
